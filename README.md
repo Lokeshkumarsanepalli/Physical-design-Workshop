@@ -34,14 +34,13 @@ A PDK is a collection of files that model a fabrication process for EDA tools. I
 | Digital Standard Cell Libraries | Pre-built logic gates (AND, NAND, XOR, etc.) |
 | I/O Libraries | Pad/interface cells |
 
-**Milestone:** June 30, 2020 — Google + SkyWater released **SKY130**, the **first-ever fully open-source production PDK** (Apache 2.0 license, 130nm node). This is the PDK OpenLANE is tuned for.
+**Milestone:** June 30, 2020 — Google + SkyWater released **SKY130**, the **first-ever fully open-source production PDK** (Apache 2.0 license, 130nm node). This is the PDK OpenLANE is tuned for. https://github.com/google/skywater-pdk
 
 > 💡 **Is 130nm too old to matter?** No — it's still ~13% of foundry sales by volume, and designs like a single-cycle RV32I have hit 327 MHz post-layout (>1GHz pipelined) on SKY130.
 
 ---
 
-## 3. The RTL → GDSII Flow (the part you actually need to learn)
-
+## 3. The RTL → GDSII Flow 
 This is the **backbone of physical design** — memorize this pipeline before anything else.
 
 ```mermaid
