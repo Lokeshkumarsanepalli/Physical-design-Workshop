@@ -1,13 +1,9 @@
-# Physical-design-Workshop
-
-Firstly, let us understand the entire RTL to GDS flow
-<img width="1100" height="779" alt="image" src="https://github.com/user-attachments/assets/84b4901b-d7ca-4ea0-82e5-3b39f054f704" />
 
 # SoC Physical Design with OpenLANE — Beginner's Notes
 
 ---
 
-## 1. The Core Equation
+## The Core Equation
 
 Everything in digital ASIC design boils down to this:
 
@@ -23,7 +19,7 @@ Historically all three were **closed-source**. The open-source movement (Google 
 
 ---
 
-## 2. What is a PDK? (Process Design Kit)
+## What is a PDK? (Process Design Kit)
 
 A PDK is a collection of files that model a fabrication process for EDA tools. It's what lets you design a chip *without* needing to be the fab.
 
@@ -40,7 +36,7 @@ A PDK is a collection of files that model a fabrication process for EDA tools. I
 
 ---
 
-## 3. The RTL → GDSII Flow in OpenLane
+## The RTL → GDSII Flow in OpenLane
 This is the **backbone of physical design** — memorize this pipeline before anything else.
 
 <img width="1100" height="779" alt="image" src="https://github.com/user-attachments/assets/ffef5db7-7b6f-4833-ad97-7165d2074a7b" />
@@ -58,7 +54,7 @@ This is the **backbone of physical design** — memorize this pipeline before an
 
 ---
 
-## 4. The Open-Source EDA Toolchain (what tool does what)
+## The Open-Source EDA Toolchain (what tool does what)
 
 | Task | Tool | Notes |
 |---|---|---|
@@ -74,7 +70,7 @@ This is the **backbone of physical design** — memorize this pipeline before an
 
 ---
 
-## 5. What is OpenLANE?
+## What is OpenLANE?
 
 OpenLANE is the **automated RTL→GDSII flow** (aka automated Place-and-Route / Physical Implementation) that stitches together the open-source tools above.
 
@@ -95,7 +91,7 @@ OpenLANE is the **automated RTL→GDSII flow** (aka automated Place-and-Route / 
 
 ---
 
-## 6. Two Concepts Every Beginner Trips On
+## Two Concepts Every Beginner Trips On
 
 ### A. Antenna Rule Violations
 During fabrication, long metal wire segments can act like unintended **antennas**: reactive ion etching accumulates charge on the wire, which can damage the connected transistor gate.
@@ -114,7 +110,7 @@ Any time the netlist is modified post-synthesis (CTS insertion, post-placement o
 
 ---
 
-## 7. Quick-Start Mental Model (TL;DR for a new physical design engineer)
+## Quick-Start Mental Model (TL;DR for a new physical design engineer)
 
 1. Get comfortable with the **RTL → GDSII** pipeline order: `Synth → Floorplan/Power Plan → Place → CTS → Route → Sign-off`
 2. Know **which tool owns which stage** (table in section 4) — when something breaks, you'll know where to look
