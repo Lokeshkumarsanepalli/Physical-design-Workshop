@@ -11,16 +11,7 @@ Firstly, let us understand the entire RTL to GDS flow
 
 Everything in digital ASIC design boils down to this:
 
-```mermaid
-flowchart LR
-    A[RTL IPs] --> D((( & )))
-    B[EDA Tools] --> D
-    C[PDK Data] --> D
-    D --> E[ASIC]
-```
-
-<img width="2880" height="1800" alt="image" src="https://github.com/user-attachments/assets/5503f21b-8e0a-483c-a224-dd07a0ee6fc3" />
-
+<img width="992" height="1066" alt="image" src="https://github.com/user-attachments/assets/bd7483bf-60e6-4462-ab82-999dd016030f" />
 
 | Ingredient | What it is |
 |---|---|
