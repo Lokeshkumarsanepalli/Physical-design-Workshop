@@ -40,21 +40,10 @@ A PDK is a collection of files that model a fabrication process for EDA tools. I
 
 ---
 
-## 3. The RTL → GDSII Flow 
+## 3. The RTL → GDSII Flow in OpenLane
 This is the **backbone of physical design** — memorize this pipeline before anything else.
 
-```mermaid
-flowchart LR
-    RTL[RTL] --> SYN[Synthesis]
-    PDK[(PDK)] -.-> SYN
-    SYN --> FPP[Floor + Power Planning]
-    FPP --> PLACE[Placement]
-    PLACE --> CTS[Clock Tree Synthesis]
-    CTS --> ROUTE[Routing]
-    ROUTE --> SIGNOFF[Sign-Off]
-    SIGNOFF --> GDSII[GDSII]
-    PDK -.-> SIGNOFF
-```
+<img width="1100" height="779" alt="image" src="https://github.com/user-attachments/assets/ffef5db7-7b6f-4833-ad97-7165d2074a7b" />
 
 ### Stage-by-stage cheat sheet
 
