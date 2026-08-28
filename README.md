@@ -19,6 +19,9 @@ flowchart LR
     D --> E[ASIC]
 ```
 
+<img width="2880" height="1800" alt="image" src="https://github.com/user-attachments/assets/5503f21b-8e0a-483c-a224-dd07a0ee6fc3" />
+
+
 | Ingredient | What it is |
 |---|---|
 | **RTL IP's** | Your Verilog/HDL design or reused IP blocks |
