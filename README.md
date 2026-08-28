@@ -11,7 +11,7 @@ Firstly, let us understand the entire RTL to GDS flow
 
 Everything in digital ASIC design boils down to this:
 
-<img width="992" height="1066" alt="image" src="https://github.com/user-attachments/assets/bd7483bf-60e6-4462-ab82-999dd016030f" />
+<img width="500" height="533" alt="image" src="https://github.com/user-attachments/assets/bd7483bf-60e6-4462-ab82-999dd016030f" />
 
 | Ingredient | What it is |
 |---|---|
