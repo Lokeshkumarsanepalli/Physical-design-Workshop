@@ -1,6 +1,5 @@
 
-# SoC Physical Design with OpenLANE — Beginner's Notes
-
+# SoC Physical Design with OpenLANE
 ---
 
 ## The Core Equation
