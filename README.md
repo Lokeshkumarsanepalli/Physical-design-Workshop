@@ -60,20 +60,6 @@ This is the **backbone of physical design** — memorize this pipeline before an
 
 ## 4. The Open-Source EDA Toolchain (what tool does what)
 
-```mermaid
-flowchart TD
-    ASIC((ASIC)) --> EDA[EDA Tools]
-    ASIC --> RTLD[RTL Designs]
-    ASIC --> PDKD[PDK Data]
-    EDA --> QFLOW[QFlow]
-    EDA --> OROAD[OpenROAD]
-    EDA --> OLANE[OpenLANE]
-    RTLD --> LC[librecores.org]
-    RTLD --> OC[opencores.org]
-    RTLD --> GH[github.com]
-    PDKD --> SKY[SkyWater 130nm<br/>github.com/google/skywater-pdk]
-```
-
 | Task | Tool | Notes |
 |---|---|---|
 | RTL Synthesis | **Yosys** + **ABC** | HDL → gate-level netlist |
