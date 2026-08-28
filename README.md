@@ -133,9 +133,67 @@ Any time the netlist is modified post-synthesis (CTS insertion, post-placement o
 - CloudV (cloud Verilog IDE/simulator): [cloudv.io](https://cloudv.io)
 
 
+## 🗂️ Topics Covered
 
+### Introduction to OpenROAD / OpenLane
+- OpenROAD comprises multiple tools (OpenLane, Yosys, etc.) that together provide a complete **RTL to GDSII** flow.
+- Basic Linux/terminal commands used throughout the workshop (`ls -ltr`, `cd`, `command --help`, `clear`).
 
+### PDK (Process Design Kit) Setup
+Explains the three layers of the SkyWater PDK ecosystem used in this workshop:
+- **skywater-pdk** – raw PDK files as released by the foundry.
+- **open_pdks** – scripts that convert the raw foundry files into a usable format.
+- **sky130A** – the final, ready-to-use PDK that EDA tools actually run with.
 
+### sky130A PDK Structure
+- **libs.tech** – tool-specific technology files (Magic tech file, KLayout layer/DRC rules, ngspice models) that tell each EDA tool how to interpret the process technology.
+- **libs.ref** – specific to the process technology and standard cell library used in this workshop: `sky130_fd_sc_hd` (130nm foundry process, high-density standard cell variant for small area/tight packing).
+
+### File Types inside `libs.ref`
+| File type | Purpose |
+|---|---|
+| `verilog` | Behavioral models of each cell (functional simulation, not physical) |
+| `spice` | Transistor-level SPICE netlists for circuit-accurate simulation |
+| `techlef` | Technology LEF – routing layers, vias, and design rules for the process |
+| `maglef` | Magic-tool layout view of cells in LEF-compatible abstract form |
+| `mag` | Native Magic layout files (full geometric layout) |
+| `gds` | GDSII files – actual physical layout used for fabrication |
+| `doc` | Datasheets / documentation for the cells |
+| `cdl` | Circuit Description Language netlist, used for LVS checks |
+| `lib` | Liberty files – timing, power, and functional data used by synthesis/STA tools |
+| `lef` | Abstract physical view of each cell (pins, blockages, size) for placement & routing |
+
+Also covers **process corners** and the `.lib`/technology LEF files as viewed in the terminal.
+
+### Running OpenLane
+- OpenLane is TCl-based and automates the flow **command by command**, or fully, from RTL to GDSII.
+- `package require openlane 0.9` loads the OpenLane Tcl package.
+- Example design used: **picorv32a** (one of OpenLane's built-in example designs), consisting of:
+  - `picorv32a.v` – RTL source
+  - `picorv32a.sdc` – design constraints
+  - `sky130A_sky130_fd_sc_hd_config.tcl` – configuration file
+
+### OpenLane Flow Stages
+The design setup / `prep` stage initializes the run directory, followed by the full flow:
+
+```
+RTL Synthesis → Floorplan → Placement → CTS (Clock Tree Synthesis)
+→ Routing → STA (Static Timing Analysis) → Physical Verification
+→ GDSII
+```
+
+Screenshots capture running `prep`, synthesis, and inspecting generated log/report files, along with a look at the OpenLane GitHub repository and flow diagram for reference.
+
+## 🛠️ Tools & Technologies
+- **OpenLane** – automated RTL-to-GDSII flow
+- **OpenROAD** – open-source physical design tool suite
+- **Yosys** – RTL synthesis
+- **Magic / KLayout** – layout viewers/editors
+- **ngspice** – circuit simulation
+- **SkyWater 130nm (sky130) PDK**
+
+## 📎 Source
+This README summarizes handwritten annotations and terminal screenshots from workshop slide deck `1_3_vsdworkshop.pdf`.
 
 
 
