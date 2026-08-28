@@ -5,9 +5,6 @@ Firstly, let us understand the entire RTL to GDS flow
 
 # SoC Physical Design with OpenLANE — Beginner's Notes
 
-> Distilled from Mohamed Shalan's (AUC / efabless) workshop *"SoC Design Using OpenLANE"*.
-> This README is meant as a quick-reference map for anyone starting **digital ASIC physical design**.
-
 ---
 
 ## 1. The Core Equation
