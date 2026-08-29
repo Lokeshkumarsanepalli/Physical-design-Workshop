@@ -7,6 +7,7 @@ Notes and reference material from a physical-design workshop covering the open-s
 ## 1. The Core Equation
 
 Everything in digital ASIC design boils down to three ingredients:
+
 <img width="508" height="526" alt="image" src="https://github.com/user-attachments/assets/c2dcbd99-5abf-4703-8f85-997f4c2e3e8e" />
 
 
